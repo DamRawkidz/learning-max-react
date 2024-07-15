@@ -11,38 +11,9 @@ const data = [
   }
 ]
 
-// const readtDescription = ['Fundamental', 'Crucial', 'Core']
-
-
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * (max + 1))
-// }
-
-// function Header() {
-//   const description = readtDescription[getRandomInt(2)]
-
-//   return (
-//     <header>
-//       <img src={reactImg} alt="Stylized atom" />
-//       <h1>React Essentials</h1>
-//       <p>
-//         {description} React concepts you will need for almost any app you are
-//         going to build!
-//       </p>
-//     </header>
-//   )
-// }
-
-
-// function CoreConcept({ iamge, title, description }) {
-//   return (
-//     <li>
-//       <img src={iamge} alt={title} />
-//       <h3>{title}</h3>
-//       <p>{description}</p>
-//     </li>
-//   )
-// }
+function handcldeClick(state) {
+  console.log(state)
+}
 
 function App() {
   return (
@@ -58,11 +29,12 @@ function App() {
         <section id="examples">
           <h2>Example</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={() => handcldeClick('components')}>Components</TabButton>
+            <TabButton onSelect={() => handcldeClick('JSX')}>JSX</TabButton>
+            <TabButton onSelect={() => handcldeClick('Props')}>Props</TabButton>
+            <TabButton onSelect={() => handcldeClick('State')}>State</TabButton>
           </menu>
+          Dunamic Content
         </section>
       </main>
     </div>
